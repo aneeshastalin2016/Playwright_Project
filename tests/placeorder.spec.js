@@ -42,6 +42,7 @@ test('Login-> Select a product under Phones-> Add to Cart -> ok-> Add details ->
 
     //await page.locator('#itemc').nth(0).click()
     //await page.locator('//a[text()="Nokia lumia 1520"]').click()
+    await placeorder8.selectphoneCategory()
     await placeorder8.selectProduct('Nexus 6')
 
     //await expect(page.locator('h2.name')).toHaveText('Nokia lumia 1520')
@@ -64,7 +65,7 @@ test('Login-> Select a product under Phones-> Add to Cart -> ok-> Add details ->
 
 
 //testcase 9
-test.only('Login -> Select pdt under Monitors-> Add to Cart-> ok-> Add details -> Purchase', async ({ page }) => {
+test('Login -> Select pdt under Monitors-> Add to Cart-> ok-> Add details -> Purchase', async ({ page }) => {
     const loginobj9 = new loginpage(page)
     await loginobj9.accessurl()
     await loginobj9.clickLogin()
@@ -73,7 +74,7 @@ test.only('Login -> Select pdt under Monitors-> Add to Cart-> ok-> Add details -
     const placeorder9 = await loginobj9.clickLoginButton()//navigation
 
     await expect(page.locator('#nameofuser')).toHaveText('Welcome aneeshastalin')
-    await placeorder9.selectphoneCategory()
+    await placeorder9.selectMonitorCategory()
     //await page.locator('#itemc').nth(1).click()
     //await page.locator('//a[text()="Sony vaio i5"]').click()
     //await expect(page.locator('h2.name')).toHaveText('Sony vaio i5')

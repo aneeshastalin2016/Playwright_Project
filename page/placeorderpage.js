@@ -16,12 +16,17 @@ class placeorderpage {
         this.purchaseorderbuttonfield = page.locator('//button[@onclick="purchaseOrder()"]')
     }
     async selectProduct(product) {
-        await this.page.locator('//a[text()="${product}"]').click()
+        await this.page.locator(`//a[text()="${product}"]`).click()
         return this
     }
 
     async selectphoneCategory() {
-        await this.selectphoneCategoryfield().click()
+        await this.selectphoneCategoryfield.nth(0).click()
+    }
+
+    async selectMonitorCategory() {
+        await this.selectphoneCategoryfield.nth(1).click()
+        return this
     }
     async addTocart() {
         await this.addTocartbuttonfield.click()
