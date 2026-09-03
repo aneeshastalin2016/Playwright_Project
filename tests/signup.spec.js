@@ -34,7 +34,7 @@ test('Sign up', async ({ page }) => {
 //await page.waitForTimeout(3000) --for giving time
 
 //testcase 2
-test.only('Sign up & close', async ({ page }) => {
+test('Sign up & close', async ({ page }) => {
     const signupobj1 = new signuppage(page)
     await signupobj1.accessurl()
     await signupobj1.clickSignup()
