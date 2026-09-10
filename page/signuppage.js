@@ -16,12 +16,12 @@ class signuppage {
         return this
     }
 
-    async enterUsername() {
-        await this.usernamefield.fill('aneeshastalin')
+    async enterUsername(username) {
+        await this.usernamefield.fill(username)
         return this
     }
-    async enterPassword() {
-        await this.passwordfield.fill('Kukku@3233')
+    async enterPassword(password) {
+        await this.passwordfield.fill(password)
         return this
     }
     async clickSignupButton() {

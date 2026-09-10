@@ -22,6 +22,7 @@ class placeorderpage {
 
     async selectphoneCategory() {
         await this.selectphoneCategoryfield.nth(0).click()
+        return this
     }
 
     async selectMonitorCategory() {
